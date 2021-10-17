@@ -1,0 +1,118 @@
+﻿<process name="Calc-DataItem-MultiCalc Stages" version="1.0" bpversion="6.0.0.434" narrative="" preferredid="d48b2302-b820-4288-847e-1f87c7cba494">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="93e9e3f8-0a3a-42c3-8d52-85d1bf9e710a" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>2bcc83ec-a4c4-4f83-9407-cd2f5c67bf68</onsuccess>
+  </stage>
+  <stage stageid="ad5b549c-be8c-4c66-b199-26e9e04fbd81" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="f2f3f330-7ece-4ba3-9c2a-c1f27f749373" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2bcc83ec-a4c4-4f83-9407-cd2f5c67bf68" name="Addition" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0c961b40-d055-49d4-ae82-83c111d73f30</onsuccess>
+    <calculation expression="[Number1]+[Number2]" stage="Sum" />
+  </stage>
+  <stage stageid="ee08a673-518b-4a42-a612-cf5f7a9df7a7" name="Division" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ad5b549c-be8c-4c66-b199-26e9e04fbd81</onsuccess>
+    <calculation expression="[Number2] / [Sum]" stage="Number1" />
+  </stage>
+  <stage stageid="0c961b40-d055-49d4-ae82-83c111d73f30" name="Multiplication" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ee08a673-518b-4a42-a612-cf5f7a9df7a7</onsuccess>
+    <calculation expression="[Number1] * [Sum]" stage="Number2" />
+  </stage>
+  <stage stageid="64a1d3e2-5082-4304-b0ca-f97d0c060423" name="Number1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>10</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f5a53382-f008-49a6-b104-885155721d26" name="Number2" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>20</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="edf9b4a6-3627-417d-8e38-7feba2552d12" name="Sum" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dae320a1-72d4-47ec-99ce-60894055864a" name="Dataitem" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+</process>

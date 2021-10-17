@@ -1,0 +1,217 @@
+﻿<process name="Decision Stage" version="1.0" bpversion="6.0.0.434" narrative="" preferredid="b9ef108f-66be-47b6-92e4-c427dbb28a17">
+  <view>
+    <camerax>27</camerax>
+    <cameray>29</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="56fa9bb1-bce0-48c3-9a2e-cfbd1fe2a93b" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>74069c31-5676-487a-9427-31b022536ddd</onsuccess>
+  </stage>
+  <stage stageid="07ba4bf2-f2b9-49f3-b0d6-d14bdd2ba656" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="bddeeddc-badb-4ca3-a9f4-c6e929461656" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-330</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="67cbe899-de2a-4143-b6f1-604dbe793c3f" name="A" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>100</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="112b10b8-a7b5-4dcb-a638-a81a85df270f" name="B" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>300</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>50</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="60aed07b-21c0-4fcc-81b9-d2693c450637" name="C" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>390</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>150</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="79f2e320-7e03-44cb-852f-0e4cf5b99624" name="Result" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>285</displayx>
+    <displayy>0</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="74069c31-5676-487a-9427-31b022536ddd" name="A&gt;B?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[A] &gt; [B]" />
+    <ontrue>bb1dd1d8-a316-49cd-9760-5f89d5ae6bc1</ontrue>
+    <onfalse>7c6bf8ca-f006-4469-9c81-f785aa318d00</onfalse>
+  </stage>
+  <stage stageid="bb1dd1d8-a316-49cd-9760-5f89d5ae6bc1" name="Anchor1" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>72860c8b-bd02-4e27-a774-d27e29da023e</onsuccess>
+  </stage>
+  <stage stageid="7c6bf8ca-f006-4469-9c81-f785aa318d00" name="Anchor2" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>41db67ff-2284-4002-9e86-b84182d7d1d5</onsuccess>
+  </stage>
+  <stage stageid="72860c8b-bd02-4e27-a774-d27e29da023e" name="A&gt;C?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[A]&gt;[C]" />
+    <ontrue>b5adff2a-0a45-4a5d-a016-95545eb0f45e</ontrue>
+    <onfalse>8f1006f4-690c-43e9-867a-94e4f3c701d0</onfalse>
+  </stage>
+  <stage stageid="41db67ff-2284-4002-9e86-b84182d7d1d5" name="B&gt;C?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[B]&gt;[C]" />
+    <ontrue>cb19e7da-84a6-4ec3-a381-990b7089bc99</ontrue>
+    <onfalse>8f1006f4-690c-43e9-867a-94e4f3c701d0</onfalse>
+  </stage>
+  <stage stageid="b5adff2a-0a45-4a5d-a016-95545eb0f45e" name="A is greatest" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c17602d0-cbf9-416f-84da-f748c2d1098b</onsuccess>
+    <calculation expression="&quot;A is Greatest&quot;" stage="Result" />
+  </stage>
+  <stage stageid="0587462e-a324-4f81-a14e-99589802e5fc" name="C is greatest" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>07ba4bf2-f2b9-49f3-b0d6-d14bdd2ba656</onsuccess>
+    <calculation expression="&quot;C is Greatest&quot;&#xA;" stage="Result" />
+  </stage>
+  <stage stageid="cb19e7da-84a6-4ec3-a381-990b7089bc99" name="B is Greatest" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d55753e0-8dff-45d0-9116-e0bf90316a40</onsuccess>
+    <calculation expression="&quot;B is Greatest&quot;" stage="Result" />
+  </stage>
+  <stage stageid="8f1006f4-690c-43e9-867a-94e4f3c701d0" name="Anchor3" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>0</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0587462e-a324-4f81-a14e-99589802e5fc</onsuccess>
+  </stage>
+  <stage stageid="c17602d0-cbf9-416f-84da-f748c2d1098b" name="Anchor4" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>165</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>07ba4bf2-f2b9-49f3-b0d6-d14bdd2ba656</onsuccess>
+  </stage>
+  <stage stageid="d55753e0-8dff-45d0-9116-e0bf90316a40" name="Anchor5" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>165</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>07ba4bf2-f2b9-49f3-b0d6-d14bdd2ba656</onsuccess>
+  </stage>
+  <stage stageid="61f207cf-2f63-4562-a63d-f95fee71aad6" name="DataItems" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>165</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>270</displaywidth>
+    <displayheight>165</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="C0C0C0" />
+  </stage>
+</process>

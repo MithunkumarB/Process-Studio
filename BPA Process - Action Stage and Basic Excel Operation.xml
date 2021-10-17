@@ -1,0 +1,374 @@
+﻿<process name="Action Stage and Basic Excel Operation" version="1.0" bpversion="6.0.0.434" narrative="ACTION STAGE IS MOST IMPORTANT STAGE IN BP, THE ACTION STAGE ALLOWS YOU TO INTERACT WITH OTHER APPLICATIONS BY CALLING A SPECIFIC FUNCTION FROM LIBRARY, EXE: MICROSOFT EXCEL - THIS LIBRARY HAVE , CREATE NEW WORKSHEET, GET ROWS.........&#xD;&#xA;&#xD;&#xA;LIBRARY REFERS TO AS : BUSSINESS OBJECT&#xD;&#xA;ACTION REFERS TO AS : FUNCTIONS&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;HERE WE GET THE DATA FROM EXCEL  AND WRITE IT TO BP-COLLECTION " preferredid="0fa66ef9-9902-4cae-8a3b-1d5c77519f4f">
+  <view>
+    <camerax>41</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="0dd4a123-7ad6-447c-81a7-500a10d72c55" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-570</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>210</displaywidth>
+    <displayheight>180</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="ed411620-f909-4317-9ce5-56d540742afe" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>bff83278-3dea-4ecf-8762-0a1211f4516f</onsuccess>
+  </stage>
+  <stage stageid="f1ce92ce-9ad0-40e4-a757-6e45dd2413cb" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2f5ed92b-7a52-477f-8374-cb94fd19fac7" name="Choice1" type="ChoiceStart">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>3d976a5b-c254-4e4f-90f1-09bcf082f96b</groupid>
+    <choices>
+      <choice expression="[Students_Data.Marks] &gt;= 90 AND [Students_Data.Marks] &lt;= 100">
+        <name>Grade-A</name>
+        <distance>30</distance>
+        <ontrue>5140d160-2634-4351-b26b-810f68c0aef7</ontrue>
+      </choice>
+      <choice expression="[Students_Data.Marks] &gt;= 80 AND [Students_Data.Marks] &lt;= 89">
+        <name>Grade-B</name>
+        <distance>60</distance>
+        <ontrue>1eac357b-2ac8-4a44-b67d-b8bc123cb8c9</ontrue>
+      </choice>
+      <choice expression="[Students_Data.Marks] &gt;= 70 AND [Students_Data.Marks] &lt;= 79">
+        <name>Grade-C</name>
+        <distance>90</distance>
+        <ontrue>0a6ee00d-f05b-4e15-ae2d-c56eaad6337a</ontrue>
+      </choice>
+      <choice expression="[Students_Data.Marks] &gt;= 60 AND [Students_Data.Marks] &lt;= 69">
+        <name>Grade-D</name>
+        <distance>120</distance>
+        <ontrue>05c7ce50-49b1-4ffb-9162-50fa423ad7cb</ontrue>
+      </choice>
+      <choice expression="[Students_Data.Marks] &gt;= 50 AND [Students_Data.Marks] &lt;= 59">
+        <name>Grade-E</name>
+        <distance>150</distance>
+        <ontrue>43a47a77-ea45-48ee-a3aa-117ec26d9662</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="315fb858-a5d2-4958-b769-e36ab33eaf11" name="Otherwise1" type="ChoiceEnd">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>925d0117-d9df-4025-9e0e-c8785e967b05</onsuccess>
+    <groupid>3d976a5b-c254-4e4f-90f1-09bcf082f96b</groupid>
+  </stage>
+  <stage stageid="5140d160-2634-4351-b26b-810f68c0aef7" name="Grade A" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>bbfd99b5-1607-4e21-a043-0fd46f652541</onsuccess>
+    <calculation expression="&quot;Grade-A&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="1eac357b-2ac8-4a44-b67d-b8bc123cb8c9" name="Grade B" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>3222f585-283f-4387-80df-539fcea385a6</onsuccess>
+    <calculation expression="&quot;Grade-B&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="0a6ee00d-f05b-4e15-ae2d-c56eaad6337a" name="Grade C" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0aff4115-e69a-4f0c-825b-4766f0ee5b10</onsuccess>
+    <calculation expression="&quot;Grade-C&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="05c7ce50-49b1-4ffb-9162-50fa423ad7cb" name="Grade D" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ff12e585-e134-4463-8c9b-2b3c8dacf7bd</onsuccess>
+    <calculation expression="&quot;Grade-D&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="43a47a77-ea45-48ee-a3aa-117ec26d9662" name="Grade E" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>16c484ed-2a8a-4797-83d2-8a55dfd78ec6</onsuccess>
+    <calculation expression="&quot;Grade-E&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="925d0117-d9df-4025-9e0e-c8785e967b05" name="Invalid Marks" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>a7f61f07-25cd-4921-8fbc-a25da8ae2a8d</onsuccess>
+    <calculation expression="&quot;Invalid Marks&quot;" stage="Students_Data.Grade" />
+  </stage>
+  <stage stageid="bbfd99b5-1607-4e21-a043-0fd46f652541" name="Anchor1" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>3222f585-283f-4387-80df-539fcea385a6</onsuccess>
+  </stage>
+  <stage stageid="3222f585-283f-4387-80df-539fcea385a6" name="Anchor2" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>15</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0aff4115-e69a-4f0c-825b-4766f0ee5b10</onsuccess>
+  </stage>
+  <stage stageid="ff12e585-e134-4463-8c9b-2b3c8dacf7bd" name="Anchor3" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>75</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0aff4115-e69a-4f0c-825b-4766f0ee5b10</onsuccess>
+  </stage>
+  <stage stageid="16c484ed-2a8a-4797-83d2-8a55dfd78ec6" name="Anchor4" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>105</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ff12e585-e134-4463-8c9b-2b3c8dacf7bd</onsuccess>
+  </stage>
+  <stage stageid="a7f61f07-25cd-4921-8fbc-a25da8ae2a8d" name="Anchor5" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>150</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>16c484ed-2a8a-4797-83d2-8a55dfd78ec6</onsuccess>
+  </stage>
+  <stage stageid="0aff4115-e69a-4f0c-825b-4766f0ee5b10" name="Anchor6" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>45</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ef856af5-2a8f-4889-b2c2-5300cdd63f0f</onsuccess>
+  </stage>
+  <stage stageid="7b5ca02d-2942-42a8-b717-c3fe02b58296" name="Students_Data" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>360</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Name" type="text" namespace="" description="Name of the Students" />
+      <field name="Marks" type="number" namespace="" description="Marks" />
+      <field name="Grade" type="text" namespace="" description="Grade" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="6af6d598-0a41-485f-b63a-36679a5f1ca0" name="Loop Start1" type="LoopStart">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>2f5ed92b-7a52-477f-8374-cb94fd19fac7</onsuccess>
+    <groupid>93c1c431-1128-4a21-87e2-941c0070c64d</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Students_Data</loopdata>
+  </stage>
+  <stage stageid="ef856af5-2a8f-4889-b2c2-5300cdd63f0f" name="Loop End1" type="LoopEnd">
+    <narrative>
+    </narrative>
+    <displayx>150</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f1ce92ce-9ad0-40e4-a757-6e45dd2413cb</onsuccess>
+    <groupid>93c1c431-1128-4a21-87e2-941c0070c64d</groupid>
+  </stage>
+  <stage stageid="193adbf9-df22-4625-af64-8dba098ece86" name="Collection" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>195</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="999999" />
+  </stage>
+  <stage stageid="bff83278-3dea-4ecf-8762-0a1211f4516f" name="Create Instance" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="flag" name="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>e5dfedd5-e78a-45f5-ab22-3ee6015a7fab</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="027da434-24f7-4d6b-9286-30b680f1919f" name="handle" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>300</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e5dfedd5-e78a-45f5-ab22-3ee6015a7fab" name="Open workbook" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" narrative="The path and name of the file which should be opened." expr="&quot;C:\Users\vignesh\Music\Students_Data.xlsx&quot;" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>cb4258ff-2ef3-4e12-ba3f-569867b70495</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="32a94cf1-9188-4b3b-8cc8-8216e655d663" name="Workbook Name" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>405</displayx>
+    <displayy>135</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d78bf47d-8af3-495e-80f4-8ec57b5e04aa" name="Get to Collection" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Sheet1&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="Students_Data" />
+    </outputs>
+    <onsuccess>6af6d598-0a41-485f-b63a-36679a5f1ca0</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="9952fc2f-4c34-4230-9684-9531546184c9" name="Show  workbook" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance which should have its window displayed. The default of zero indicates the currently active instance." expr="[handle]" />
+    </inputs>
+    <onsuccess>d78bf47d-8af3-495e-80f4-8ec57b5e04aa</onsuccess>
+    <resource object="MS Excel VBO" action="Show" />
+  </stage>
+  <stage stageid="cb4258ff-2ef3-4e12-ba3f-569867b70495" name="Anchor7" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9952fc2f-4c34-4230-9684-9531546184c9</onsuccess>
+  </stage>
+  <stage stageid="62c8382e-69d4-4e36-8978-dd9e3145627e" name="Block1" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>90</displayy>
+    <displaywidth>225</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+</process>
